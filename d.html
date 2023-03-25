@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="functions.js"></script>
+</head>
+<body>
+   
+    <form class="dgInputs">
+
+        <label for="dateDg"></label>
+        <input type="date" id="inputDate" name="fname" placeholder="DD/MM/YYYY"><br><br>
+          
+        <label for="membership"></label>
+        <select nme="" id="inputMemb" style="width: 150px; text-align: center; font-size: 17px;">
+            <option value="s">S</option>
+            <option value="u">u</option>
+            <option value="l">l</option>
+        </select><br><br>
+
+        <label for="ms">&:</label>
+        <select name="ms" id="inputms" style="width: 150px; text-align: center; font-size: 17px;margin-left: 60px;">
+            <option value="ger">ny</option>
+            <option value="r">nc</option>
+            <option value="p">pa</option>
+             <option value="t">ta</option>
+            <option value="op">o</option>
+        </select><br><br>
+        
+        <button class="btnSubmit" onclick="findms()">Submit</button>
+    </form>
+    <div class="guide"  >
+        <div class="guideDiv" id="headerDg" >
+                <p id="step1"></p>
+                <button onclick="copyThisText(this)" style="margin-top: -15px; margin-left: 750px;" class="btnTest">
+                    feedback</button>
+        </div>
+         <div class="guideDiv" >
+                <p id="step2"></p>
+               
+        </div>
+         <div class="guideDiv" >
+                <p id="step3"></p>
+                 <p id="step4"></p>
+                    <button onclick="copyThisText(this)" style="margin-top: -15px; margin-left: 750px;" class="btnTest">
+                   successfully</button>
+        </div>
+         <div class="guideDiv" >
+               
+        </div>
+         <div class="guideDiv" >
+                <p id="step5"></p>
+               
+        </div>
+         <div class="guideDiv" >
+                <p id="step6"></p>
+                <button onclick="copyThisText(this)" style="margin-top: -15px; margin-left: 750px; height: 50px;"  class="btnTest">
+                   there </button>
+        </div>
+        
+         <div class="guideDiv" >
+                <p id="step7"></p>
+        </div>
+         <div class="guideDiv" >
+                <p id="step8"></p>
+        </div>
+         <div class="guideDiv" >
+                <p id="step9"></p>
+        </div>
+         <div class="guideDiv" >
+                <p id="step10"></p>
+        </div>
+
+        
+    </div>
+    
+        <button style="margin-left: 850px; margin-top: 15px;" class="btnPost" onclick="findTerms()">Post</button>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

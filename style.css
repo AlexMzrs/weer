@@ -1,0 +1,181 @@
+ul{
+ margin-left:  90px;
+ padding: 0;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+
+}
+
+ul li a {
+    display: block;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #1e1e1e;
+  line-height: 100px;
+  padding: 0 20px;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+
+}
+body{
+    background-color: #eee;
+
+}
+ul li a:hover {
+
+  color: red;
+
+}
+
+.chat {
+ margin-left: 20px;
+ height:50px  ;
+ margin-bottom: 10px;
+ 
+}
+input{
+  width: 140px;
+  font-size: small;
+  text-align: center;
+  background-color: rgb(243, 255, 244);
+  height: 20px;
+  
+}
+.IntroChats{
+  display: inline-block;
+  margin-top: 62px;
+  width: 440px;
+  border-style: double;
+}
+.chatHeader{
+  text-align: center;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+  border-style: double;
+  background-color: rgb(0, 153, 173);
+  font-size: 22px;
+   color: white;
+}
+button{
+  margin-right: 15px;
+  margin-top: 17px;
+  height: 36px;
+  width: 400px;
+  border-radius: 12px;
+}
+button {
+  background-color: rgb(234, 247, 232);
+}
+.IntroChats2{
+  display: inline-block;
+  margin-top: 1px;
+  width: 440px;
+  border-style: double;
+}
+.topBg
+{
+    height: 79px;
+    background-color: rgb(1, 107, 228);
+    margin-top: -48px;
+    text-align: center;
+}
+.topBg h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position:initial ;
+  padding-top: 26px;
+  font-size: 40px;
+  color: white;
+}
+.dgInputs{
+  margin-left: 351px;
+  margin-top: 19px;
+}
+label{
+  font-size: 20px;
+}
+.btnSubmit
+{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 1px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+  margin-left: 65px;
+
+}
+.guideDiv{
+  border: 1px solid black;
+  height: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+.guide{
+  margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: 700px;
+}
+.btnPost{
+  background-color: #0686ee; /* Green */
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 1px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+  margin-left: 65px;
+}
+.btnTest{
+  width: 250px;
+  height: 100px;
+
+}
+.VguideDiv{
+  border: 1px solid black;
+  height: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+.Vguide{
+  margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: 500px;
+}
+.textCenter
+{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.QTchat
+{
+    margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: 500px;
+}
+.VguideQT
+{
+  margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: 500px;
+}
