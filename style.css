@@ -1,181 +1,340 @@
-ul{
- margin-left:  90px;
- padding: 0;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+      <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-color: #373c47;
 }
 
-ul li {
-  list-style: none;
-  display: inline-block;
-  float: left;
-
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0.5%;
 }
-
-ul li a {
-    display: block;
-  text-decoration: none;
-  font-size: 25px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #1e1e1e;
-  line-height: 100px;
-  padding: 0 20px;
-}
-nav {
-    width: 100%;
-    height: 100px;
-    background-color: lightblue;
-
-}
-body{
-    background-color: #eee;
-
-}
-ul li a:hover {
-
-  color: red;
-
-}
-
-.chat {
- margin-left: 20px;
- height:50px  ;
- margin-bottom: 10px;
- 
-}
-input{
-  width: 140px;
-  font-size: small;
+.left-sidebar {
+  background: #1f635671;
+  flex-basis: 26%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  height: 100vh;
+  align-items: center;
   text-align: center;
-  background-color: rgb(243, 255, 244);
-  height: 20px;
-  
+
 }
-.IntroChats{
-  display: inline-block;
-  margin-top: 62px;
-  width: 440px;
-  border-style: double;
+.right-sidebar {
+  background: #02240150;
+  flex-basis: 26%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  height: 100vh;
 }
-.chatHeader{
+
+.center-sitebar {
+  flex-basis: 47%;
+  background: #021c3a7e;
+  align-self: flex-start;
+  height: 800px;
   text-align: center;
-  font-size: xx-large;
-  font-family: 'Times New Roman', Times, serif;
-  margin: auto;
-  border-style: double;
-  background-color: rgb(0, 153, 173);
-  font-size: 22px;
-   color: white;
 }
-button{
-  margin-right: 15px;
-  margin-top: 17px;
-  height: 36px;
-  width: 400px;
-  border-radius: 12px;
+
+
+.ddwn {
+  height: 80px;
+  align-items: center;
+  background: #7db2f7;
 }
-button {
-  background-color: rgb(234, 247, 232);
+label {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(48, 47, 47);
 }
-.IntroChats2{
-  display: inline-block;
-  margin-top: 1px;
-  width: 440px;
-  border-style: double;
+#cdcsel {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 23px;
+  background: #1876f2;
+  color: white;
+  height: 45px;
 }
-.topBg
-{
-    height: 79px;
-    background-color: rgb(1, 107, 228);
-    margin-top: -48px;
+option {
+  border: 1px solid black;
+}
+.cdcBtn {
+  text-align: center;
+  font-size: large;
+  margin-left: 10px;
+  width: 120px;
+  height: 30px;
+  margin-top: -10px;
+  border-radius: 13px;
+  background-color: rgb(0, 146, 0);
+  color: white;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #373c47;
+}
+
+
+.button-19 {
+  appearance: button;
+  background-color: #3c89ad;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+
+  font-family: din-round, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 13px;
+  height: auto;
+  margin-top: 10px;
+  width: 600px;
+  white-space: normal;
+   word-wrap: break-word;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #153357d3;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+.btnside {
+  appearance: button;
+  background-color: #3c89ad;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+
+  font-family: din-round, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 13px;
+  height: auto;
+  margin-top: 10px;
+  width: 450px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.btnside::after{
+  background-clip: padding-box;
+  background-color: #02240150;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.t{
+    border: 2px solid white;
+    height: 30px;
+    background: rgba(85, 123, 248, 0.253);
     text-align: center;
+    font-size: x-large;
+    color: rgb(1, 187, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    
 }
-.topBg h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  position:initial ;
-  padding-top: 26px;
-  font-size: 40px;
-  color: white;
+.noT{
+    border: 2px solid white;
+    height: 30px;
+    background: rgba(85, 123, 248, 0.253);
+    text-align: center;
+    font-size: x-large;
+    color: rgb(255, 11, 11);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    
 }
-.dgInputs{
-  margin-left: 351px;
-  margin-top: 19px;
+h3{
+    color: white;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    margin-left: 25px;
 }
-label{
-  font-size: 20px;
+.right-sidebar h3{
+    color: white;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    margin-right: 30px;
 }
-.btnSubmit
-{
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 26px;
-  margin: 4px 1px;
-  cursor: pointer;
-  border-radius: 12px;
-  width: 150px;
-  margin-left: 65px;
+.right-sidebar button{
+    margin-left: 20px
+}
+</style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/products/" class="nav-link">Products</a>
+      <a href="/about/" class="nav-link">Abo666ut</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <button class="nav-link">HomePage</button>
+    </nav>
 
-}
-.guideDiv{
-  border: 1px solid black;
-  height: 50px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-}
-.guide{
-  margin-top: 20px;
-  margin-left: 350px;
-  text-align: center;
-  width: 700px;
-}
-.btnPost{
-  background-color: #0686ee; /* Green */
-  border: none;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 26px;
-  margin: 4px 1px;
-  cursor: pointer;
-  border-radius: 12px;
-  width: 150px;
-  margin-left: 65px;
-}
-.btnTest{
-  width: 250px;
-  height: 100px;
+    <div class="container">
+      <div class="left-sidebar">
+        <h3 style="margin-top: 50px">Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+      </div>
 
-}
-.VguideDiv{
-  border: 1px solid black;
-  height: 50px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-}
-.Vguide{
-  margin-top: 20px;
-  margin-left: 350px;
-  text-align: center;
-  width: 500px;
-}
-.textCenter
-{
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-.QTchat
-{
-    margin-top: 20px;
-  margin-left: 350px;
-  text-align: center;
-  width: 500px;
-}
-.VguideQT
-{
-  margin-top: 20px;
-  margin-left: 350px;
-  text-align: center;
-  width: 500px;
-}
+      <div class="center-sitebar">
+        <div class="ddwn">
+          <label for="data">changed: </label>
+          <select name="data" id="cdcsel">
+            <option value="ldiv"></option>
+            <option value="sdiv"></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <button onclick="dataDiv()" class="cdcBtn">Select</button>
+        </div>
+
+        <div id="ldiv">
+          <p class="noT"></p>
+
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+        </div>
+
+        <div id="sdiv">
+          <p class="t"></p>
+
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+          <button class="button-19"></button>
+        </div>
+      </div>
+
+      <div class="right-sidebar">
+        <h3 style="margin-top: 50px">Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+        <h3>Success</h3>
+        <button class="btnside"></button>
+      </div>
+    </div>
+
+    <script>
+      function dataDiv() {
+        hideAll();
+        var data = document.getElementById("cdcsel").value;
+        document.getElementById(data).style.display = "";
+      }
+      function hideAll() {
+        console.log("Mpike Hide");
+        document.getElementById("ldiv").style.display = "none";
+        document.getElementById("sdiv").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
