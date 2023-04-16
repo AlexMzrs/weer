@@ -1,0 +1,102 @@
+function copyEmail(valueArray) {
+  var cst = $('#cstname').val();
+  var cstCamel = toCamelCase(cst);
+  var value = valueArray[0];
+  var mainText = valueArray[1];
+  var combinedText ="Hello "+cstCamel+"\n\n"+ value +"\n"+ mainText;
+  alert(combinedText);
+}
+function toCamelCase(str) {
+  return str
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .map((word, index) => {
+      if (index === 0) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+ 
+
+GS 
+
+function getValueFromSheet(sheet_, range, mainSheetName, mainRange) {
+  var spreadsheet = SpreadsheetApp.openById('1iJAclyl_4yRF_a1m41Upk9_uiSLz7NgwAB9lj5Fa94I');
+  var sheet = spreadsheet.getSheetByName(sheet_);
+  var mainSheet = spreadsheet.getSheetByName(mainSheetName);
+  
+  var value = sheet.getRange(range).getValue();
+  var mainText = mainSheet.getRange(mainRange).getValue();
+  
+  return [value, mainText];
+}
+
+
+html 
+
+<div class="homeBtn">
+    <div class="input-container">
+    <label class="label" for="cname">Cst Name</label>
+    <input type="text" name="cname" id="cstname">
+  </div>
+    <div class="container">
+        <div class="button-container">
+
+            <div class="button-wrapper">
+                <div class="label-wrapper"><div class="label">Legal Address request documents</div></div>
+                <button class="Txtbutton" onclick="loadData(this,'A1')">LegalAddress</button>
+            </div>
+
+              <div class="button-wrapper">
+                <div class="label-wrapper"><div class="label">Legal Address Wrong documents</div></div>
+                <button class="Txtbutton" onclick="loadData(this,'A2')">LegalAddress</button>
+            </div>
+
+              <div class="button-wrapper">
+                <div class="label-wrapper"><div class="label">Legal Address Completed</div></div>
+                <button class="Txtbutton" onclick="loadData(this,'A3')">LegalAddress</button>
+            </div>
+            
+        </div> 
+    </div> 
+</div> 
+
+
+
+css
+
+
+.label {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  color: white;
+  margin-bottom: 1px;
+}
+
+.label-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.label-wrapper:hover {
+  background-color: #4d4d4d;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+#cstname{
+    width: 302px;
+    height: 28px;
+        text-align: center;
+}
+   
