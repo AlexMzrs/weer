@@ -1,0 +1,244 @@
+<div id="chargeDiv">
+  <div id="container">
+    <div id="left">
+            <div class="label-wrapper">
+      <div class="label">What is a chargeback?</div>
+    </div>
+    <button class="button">
+A chargeback, in the context of N26, is a process where a customer can dispute a card transaction and potentially receive a refund from the merchant
+if the dispute is resolved in their favor. N26, a digital bank, offers chargeback services through Mastercard, allowing customers to contest transactions
+made by unauthorized individuals or in cases where a merchant has made an error. This mechanism helps protect customers and provides them with a means to recover 
+their funds in situations such as not receiving goods or services as expected.
+    </button>
+    <div class="label-wrapper"><div class="label">You ordered goods online but never received them</div></div>
+    <button class="button">
+Kindly allow the estimated delivery date to pass. 
+If the items do not arrive within the given timeframe, you may begin disputing the transaction from that date. 
+Please remember, according to Mastercard's guidelines, you must submit the dispute within 120 days of the expected delivery date.
+    </button>
+    <div class="label-wrapper"><div class="label">Never provided with an expected delivery date</div></div>
+    <button class="button">
+In this case, Mastercard lets you start a dispute 30 days after the transaction date. 
+You then have a 120-day window to file the dispute.
+    </button>
+    <div class="label-wrapper">
+      <divclass="label">Wrong order</divclass=>
+    </div>
+    <button class="button">
+In this situation, you can start the dispute immediately if you can't fix the problem with the merchant. 
+You have 120 days from the day you got the items.
+    </button>
+    <div class="label-wrapper">
+      <div class="label">Merchant said they refunded me but never received</div>
+    </div>
+    <button class="button">
+Refunds may take up to 15 days from when the merchant sent them. If you haven't gotten your refund after 15 days, just follow the steps to start a dispute.
+Make sure to give the transaction date, amount, merchant, and your reason for challenging the transaction.
+    </button>
+
+    </div>
+
+    <div id="center">      
+      <div class="steps">
+
+        <div class="legalSteps">
+          <div class="step"><button class="button">Block</button></div>
+          <div class="step"><button class="button">Reorder</button></div>
+          <div class="step"><button class="button">Ask info</button></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="cdcPostBtns">
+            <button onclick="cdcPost(1)">Requested</button>
+            <button onclick="cdcPost(2)">Escalated</button>
+            <button onclick="cdcPost(3)">Completed</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+      <div id="right">
+                    <div class="label-wrapper">
+      <div class="label">Unauthorized Transaction</div>
+    </div>
+    <button class="button">
+If you see a transaction you didn't authorize in your account, it's vital to get a new card to secure your account and stop more unauthorized transactions. In your N26 app, go to the 'Cards' tab to order a new card. 
+Choose "stolen" as the reason if it fits your situation. With this option, your card will be automatically blocked.. 
+    </button>
+    <div style="margin-top: 0px;"  class="label-wrapper"><div class="label">Get Help does not appear</div></div>
+    <button class="button">
+If you select a transaction but the 'Get help' button doesn’t appear, this means that the transaction is still in authorization. 
+In this case, you’ll need to wait until the charge becomes a presentment.
+    </button>
+    <div style="margin-top: 0px;"  class="label-wrapper"><div class="label">How does card fraud occur? </div></div>
+    <button class="button">
+1.Your card gets copied at a tampered ATM, which steals card info.
+2.Your card details get stolen online. This can happen if:
+ -You buy from a dishonest website
+ -Your info gets taken during a real purchase
+ -Someone hacks your online shopping account
+3.Someone takes your actual card and uses it to buy things.
+    </button>
+    <div style="margin-top: 0px;"  class="label-wrapper">
+      <div class="label">How can I protect my account from fraud?</div>
+    </div>
+    <button class="button">
+Here are some simple steps to keep your account safe from fraud:
+
+-Stick to trusted banks' ATMs
+-Shop only on reliable online retailers and websites
+-Regularly update your online passwords and PINs
+-Ignore texts or emails claiming to be from N26 that ask for your card or account details or have odd links. N26 won't request this information outside the N26 app or WebApp.
+-Adjust card settings in the N26 app, such as disabling online payments, ATM withdrawals, and foreign transactions, or setting spending limits based on your normal habits.
+-Avoid Magnetic Stripe transactions when possible, and opt for safer NFC chip-based or digital wallet payments instead.
+-Always keep your card in a safe location.
+    </button>
+    <div style="margin-top: 0px;" class="label-wrapper">
+      <div class="label">We are here for you</div>
+    </div>
+    <button class="button">
+We empathize with the stress of experiencing fraud and are here to support you. 
+Our team will work diligently to resolve the issue, recover lost funds, and issue a refund if applicable. 
+Your security is our priority, and we're committed to protecting your account.
+    </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+CSS
+
+#chargeDiv #container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #353030;
+}
+#chargeDiv #left {
+  width: 28%;
+  height: 100%;
+  float: left;
+  background: linear-gradient(to right, rgb(40 76 85 / 72%), #415770);
+  color: white;
+  background-color: #128fe0;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chargeDiv #right {
+  width: 28%;
+  height: 100%;
+  float: right;
+  background: linear-gradient(to right, rgb(40 76 85 / 72%), #415770);
+  color: white;
+  background-color: #128fe0;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#chargeDiv #center {
+  background: linear-gradient(to right, rgb(40 76 85 / 72%), #415770);
+  border-top: 0;
+  border-bottom: 1px solid white; /* only bottom border */
+  margin-top: 100; /* 0 margin with navbar */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  align-items: center;
+  text-align: center;
+  width: 42%;
+  height: 100%;
+}
+
+#chargeDiv #center label {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#chargeDiv #center div[data-to-change] button {
+  margin-bottom: 3px;
+}
+#chargeDiv .instruction-step {
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#chargeDiv .step {
+  margin-top: 10px;
+  height: 42px;
+  border: 2px solid silver;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  color: white;
+}
+#chargeDiv .steps button {
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #01848dc7;
+  border: 0px solid black;
+  margin-bottom: 0px;
+}
+#chargeDiv .tkon {
+  font-size: 24px;
+  color: rgb(2, 204, 2) !important;
+  width: 80%;
+  margin-left: 79px;
+}
+#chargeDiv .tkoff {
+  font-size: 24px;
+  color: rgb(255, 0, 0);
+  width: 80%;
+  margin-left: 79px;
+}
+#chargeDiv .cdcPostBtns {
+  display: flex;
+  justify-content: space-between;
+}
+#chargeDiv .cdcPostBtns button {
+  flex: 1;
+  margin: 15px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgb(4, 95, 131);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  height: 50px;
+  border: 1px solid silver;
+}
+#chargeDiv .cdcPostBtns button:hover {
+  background-color: #04682a93;
+}
+#chargeDiv .cdcPostBtns button:active {
+  transform: scale(1.1);
+}
+
+#chargeDiv .legalSteps{
+    margin-top: 50px
+}
