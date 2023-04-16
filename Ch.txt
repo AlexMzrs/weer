@@ -22,7 +22,7 @@ In this case, Mastercard lets you start a dispute 30 days after the transaction 
 You then have a 120-day window to file the dispute.
     </button>
     <div class="label-wrapper">
-      <divclass="label">Wrong order</divclass=>
+      <div class="label">Wrong order</divclass=>
     </div>
     <button class="button">
 In this situation, you can start the dispute immediately if you can't fix the problem with the merchant. 
