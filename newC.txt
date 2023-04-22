@@ -1,0 +1,1150 @@
+for index:
+
+<?!= HtmlService.createHtmlOutputFromFile('Css_cdc.html').getContent(); ?>
+<?!= HtmlService.createHtmlOutputFromFile('Css_style.html').getContent(); ?>
+
+
+<?!= HtmlService.createHtmlOutputFromFile('Script_emails.html').getContent(); ?>
+<?!= HtmlService.createHtmlOutputFromFile('Script_post.html').getContent(); ?>
+<?!= HtmlService.createHtmlOutputFromFile('Script_SideMenu.html').getContent(); ?>
+
+for Script
+
+$(document).on('click', '.copyBtn', function () {
+const text = $(this).html();
+navigator.clipboard.writeText(text);
+});
+
+
+Cdc1.html
+
+<div class="pageContent pageContent-cdc">
+  <div class="left left-cdc">
+    <div class="sidenav" style="margin-top:-90px;">
+      <button class="sideBtn">Legal_Address</button>
+      <button class="sideBtn">Shipping_Address</button>
+      <button class="sideBtn">Phone_Number</button>
+      <button class="sideBtn">Nationality</button>
+      <button class="sideBtn">Email</button>
+      <button class="sideBtn">Gender</button>
+      <button class="sideBtn">Name_LastName</button>
+      <button class="sideBtn">Document_ID</button>
+      <button class="sideBtn">Tax_Number</button>
+    </div>
+  </div>
+ <div class="center center-cdc">
+        <div id="cstName" class="pair">
+                <label class="btnLabel">Customers name</label>
+                <input id="inputLA" type="text">
+            </div> 
+        <div class="Legal_Address">
+                              
+            <p>No  required</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>
+            
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+             <div  class="emailTemplate">
+                <button onclick="GetEmail('LaReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="LaReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('LaEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="LaEscPst('LaEsc')" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('LaComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="LaCompPst('LaComp')" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('LaRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="LaRejPst('LaRej')" >Copy</button>
+            </div>
+        </div>
+        <div class="Nationality">
+                              
+            <p>No  required</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>
+            
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+             <div  class="emailTemplate">
+                <button onclick="GetEmail('NatReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="NatReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('NatEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="NatEscPst()" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('NatComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="NatCompPst()" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('NatRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="NatRejPst()" >Copy</button>
+            </div>
+        </div>
+        <div class="Gender">
+                              
+            <p>No  required</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>
+            
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+             <div  class="emailTemplate">
+                <button onclick="GetEmail('GenReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="GenReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('GenEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="GenEscPst()" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('GenComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="GenCompPst()" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('GenRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="GenRejPst()" >Copy</button>
+            </div>
+        </div>
+         <div class="Name_LastName">
+                              
+            <p>No  required</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>
+            
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+             <div  class="emailTemplate">
+                <button onclick="GetEmail('LnReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="LnReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('LnEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="LnEscPst()" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('LnComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="LnCompPst()" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('LnRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="LnRejPst()" >Copy</button>
+            </div>
+        </div>
+          <div class="Document_ID">
+                              
+            <p>No  required</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>
+            
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+                 <div  class="emailTemplate">
+                <button onclick="GetEmail('DocReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="DocReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('DocEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="DocEscPst()" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('DocComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="DocCompPst()" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('DocRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="DocRejPst()" >Copy</button>
+            </div>
+        </div>
+        <div class="Tax_Number">
+                              
+            <p>No</p>                          
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>             
+            <button class="copyBtn copyBtn-cdc"></button>    
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+             <button class="copyBtn copyBtn-cdc"></button>
+
+
+            <div style="margin-top: 10px; margin-bottom: 8px" class="emailTemplate">
+                <h3 style="margin-left: 43px;" class="headers">Emails</h3>
+                <h3 style="margin-right: 3px;" class="headers">Status</h3>
+                <h3 style="margin-right: 45px;" class="headers">Post</h3>
+            </div>
+             <div  class="emailTemplate">
+                <button onclick="GetEmail('TaReq')">Copy</button>
+                <h3 class="headers">Requested</h3>
+                <button onclick="TaReqPst()" >Copy</button>
+            </div>
+            <div  class="emailTemplate">
+                <button onclick="GetEmail('TaEsc')">Copy</button>
+                 <h3 class="headers">Escalated</h3>
+                <button onclick="TaEscPst()" >Copy</button>
+            </div>
+              <div class="emailTemplate">
+                <button onclick="GetEmail('TaComp')">Copy</button>
+                 <h3 class="headers">Completed</h3>
+                <button onclick="TaCompPst()" >Copy</button>
+            </div>
+                <div class="emailTemplate">
+                <button onclick="GetEmail('TaRej')">Copy</button>
+                 <h3 class="headers">Rejected</h3>
+                <button onclick="TaRejPst()" >Copy</button>
+            </div>
+        </div>
+        <div class="Email">
+            <p>REQ</p>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="EmPost()" class="copyBtn copyBtn-cdc">Post</button>                 
+        </div>
+        <div class="Shipping_Address">
+            <p>REQ</p>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="SaPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+          <div class="Phone_Number">
+            <p>REQ</p>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+        
+
+        
+    </div>
+    <div class="right right-cdc">
+    <div class="pair">
+        <label class="btnLabel">Successfully escalated</label>
+        <button class="copyBtn"></button>
+    </div>
+    <div class="pair">
+        <label class="btnLabel">Successfully changed</label>
+        <button class="copyBtn"></button>
+    </div>
+    <div class="pair">
+        <label class="btnLabel">Find And Send</label>
+        <button class="copyBtn"></button>
+    </div>
+        <div class="pair">
+        <label class="btnLabel">Secure Inbox</label>
+        <button class="copyBtn">
+        </button>
+    </div>
+    <div class="pair">
+        <label class="btnLabel">Wrong </label>
+        <button class="copyBtn">
+        </button>
+    </div>
+    <div class="pair">
+        <label class="btnLabel">Wrong  3 times</label>
+        <button class="copyBtn"></button>
+        </button>
+    </div>
+  </div>
+  </div>
+  
+</div>
+
+
+Script_emails.html
+
+<script>
+
+function GetEmail(type)
+{
+    const cstName = document.getElementById("inputLA").value;
+    switch(type)
+    {
+
+        case 'LaReq': LARequest(cstName);break;
+        case 'LaEsc': LAEscalated(cstName);break;
+        case 'LaComp': LACompleted(cstName);break;
+        case 'LaRej' : LARejected(cstName);break;
+
+        case 'NatReq' : NaRequest(cstName);break;
+        case 'NatEsc' : NaEscalated(cstName);break;
+        case 'NatComp': NaCompleted(cstName);break;
+        case 'NatRej' : NaRejected(cstName);break;
+
+
+        case 'DocReq' : DoRequest(cstName);break;
+        case 'DocEsc' : DoEscalated(cstName);break;
+        case 'DocComp': DoCompleted(cstName);break;
+        case 'DocRej' : DoRejected(cstName);break;
+
+        case 'GenReq' : GenRequest(cstName);break;
+        case 'GenEsc' : GenEscalated(cstName);break;
+        case 'GenComp': GenCompleted(cstName);break;
+        case 'GenRej' : GenRejected(cstName);break;
+
+        case 'LnReq' : LnRequest(cstName);break;
+        case 'LnEsc' : LnEscalated(cstName);break;
+        case 'LnComp': LnCompleted(cstName);break;
+        case 'LnRej' : LnRejected(cstName);break;
+
+        case 'TaReq' : TaRequest(cstName);break;
+        case 'TaEsc' : TaEscalated(cstName);break;
+        case 'TaComp': TaCompleted(cstName);break;
+        case 'TaRej' : TaRejected(cstName);break;
+       
+       
+       
+    } 
+}
+
+function getFooter()
+{
+    const x = '';
+
+    return x;
+}
+
+function getName(name) {
+   
+  const nameParts = name.split(' ').map(part => {
+    var fullName = part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+    return fullName;
+  });
+  return nameParts.join(' ');
+}
+
+
+
+// 
+
+
+function LARequest(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\n\n'+ footer;
+alert(x);
+}
+
+function LAEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\n\n\n'+footer;
+
+alert(x);
+}
+
+function LACompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\n\n\n'+footer;
+
+alert(x);
+}
+
+function LARejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\n\n\n\n'+footer;
+
+alert(x);
+}
+
+// 
+
+
+function NaRequest(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n'+ footer;
+alert(x);
+}
+
+function NaEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n '+footer;
+
+alert(x);
+}
+
+function NaCompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n  \n\n\n\n'+footer;
+
+alert(x);
+}
+
+function NaRejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\n\n\n\n'+footer;
+
+alert(x);
+}
+
+// 
+
+
+function DoRequest(name)
+{
+    
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n'+ footer;
+alert(x);
+}
+
+function DoEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\Doc\n '+footer;
+
+alert(x);
+}
+
+function DoCompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\nDOC  \n\n\n\n'+footer;
+
+alert(x);
+}
+
+function DoRejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\DOCn\n\n\n'+footer;
+
+alert(x);
+}
+
+// 
+
+
+function GenRequest(name)
+{
+    
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n'+ footer;
+alert(x);
+}
+
+function GenEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\Genc\n '+footer;
+
+alert(x);
+}
+
+function GenCompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\nGenC  \n\n\n\n'+footer;
+
+alert(x);
+}
+
+function GenRejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\GenCn\n\n\n'+footer;
+
+alert(x);
+}
+// 
+
+
+function LnRequest(name)
+{
+    
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n LN'+ footer;
+alert(x);
+}
+
+function LnEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\Doc\n LN '+footer;
+
+alert(x);
+}
+
+function LnCompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\nLn \n\n\n\n'+footer;
+
+alert(x);
+}
+
+function LnRejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\ Ln\n\n\n'+footer;
+
+alert(x);
+}
+
+// 
+
+
+function TaRequest(name)
+{
+    
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n TA\n'+ footer;
+alert(x);
+}
+
+function TaEscalated(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\Tac\n '+footer;
+
+alert(x);
+}
+
+function TaCompleted(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\nTaC  \n\n\n\n'+footer;
+
+alert(x);
+}
+
+function TaRejected(name)
+{
+    var footer = getFooter();
+    var _name = getName(name);
+    var x =
+'Hello '+_name+',\n\n\n\TA\n\n\n'+footer;
+
+alert(x);
+}
+</script>
+
+Script_post.html
+
+<script>
+  
+
+// 
+function LaReqPst()
+{
+    var r='';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function LaEscPst()
+{
+    var r='';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function LaRejPst()
+{
+    var r='';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function LaCompPst()
+{
+    var r='Legal address change (Completed)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+// 
+
+function NatReqPst()
+{
+    var r='Nationality change (Request)';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function NatEscPst()
+{
+    var r='Na (Escalated)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function NatRejPst()
+{
+    var r='';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function NatCompPst()
+{
+    var r='';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+// 
+function LnReqPst()
+{
+    var r='LN (Request)';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function LnEscPst()
+{
+    var r='Ln (Escalated)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function LnRejPst()
+{
+    var r='Ln (BO-Rejected)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function LnCompPst()
+{
+    var r='Ln (Completed)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+//
+function GenReqPst()
+{
+    var r='GE (Request)';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function GenEscPst()
+{
+    var r='Ge (Escalated)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function GenRejPst()
+{
+    var r='Ge (BO-Rejected)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function GenCompPst()
+{
+    var r='Ge (Completed)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+// 
+
+function TaReqPst()
+{
+    var r='Ta (Request)';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function TaEscPst()
+{
+    var r='Ta (Escalated)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function TaRejPst()
+{
+    var r='Ta (BO-Rejected)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function TaCompPst()
+{
+    var r='Ta (Completed)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+// 
+function DocReqPst()
+{
+    var r='Doc (Request)';
+    var a=' '
+    var o='';
+
+    getPost(r,a,o);
+}
+function DocEscPst()
+{
+    var r='Doc (Escalated)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function DocRejPst()
+{
+    var r='Doc (BO-Rejected)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function DocCompPst()
+{
+    var r='Doc (Completed)';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+function EmPost()
+{
+    var r='Em ';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+function PnPost()
+{
+    var r='Pn ';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+function SaPost()
+{
+    var r='Sa ';
+    var a=''
+    var o='';
+
+    getPost(r,a,o);
+}
+
+
+
+// 
+</script>
+
+
+Css_style.html
+
+<style>
+  .route {
+  background-image: linear-gradient(135deg, #020f1b, #0099b1);
+  height: 1000px;
+
+  border: 1px solid #333;
+}
+.pageContent{
+display:flex;
+
+}
+
+.pair{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60px;
+}
+.btnLabel{
+   color: white;
+   margin: 6px;
+   border-bottom: 1px solid white;
+   width: 360px;
+   border-width: 360;
+   text-align: center;
+   font-size:  23px;
+   font-family: 'Times New Roman', Times, serif;
+   
+}
+.pairs
+{   
+     margin-top: 30px;
+     width: 400px;
+}
+.copyBtn{
+  background:#2c3e50;
+ margin-top: 0px;
+  border: 1px solid white;
+ 
+  color: white;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+}
+
+.copyBtn:hover{ background-image: linear-gradient(135deg, #00417e, #0198af);}
+.copyBtn:active{ 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
+}
+.right{
+border-left: 1px solid white;
+width: 25%;
+}
+.left{
+border-right: 1px solid white;
+width: 12%;
+height: 1000px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.center{
+  width: 44%;
+  display: flex;
+  height: 1000px;
+}
+
+
+
+
+</style>
+
+
+Css_cdc.html
+
+<style>
+  .copyBtn-cdc
+{
+ width: 100%;
+ margin: 7px;
+}
+.left-cdc{
+width: 10%;
+border: none;
+background-image: linear-gradient(135deg, #002f4b, #004550);
+border-right: 1px solid white;
+
+
+
+}
+.center-cdc{
+
+flex-direction: column;
+    margin-left: 200px;
+    transform: scale(1.2);
+    margin-top: 99px;
+ 
+}
+.center-cdc p {
+      margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.pageContent-cdc{
+    justify-content: flex-start;
+}
+.pageContent-cdc p{
+    color: white !important;
+    font-size: 18px!important;
+}
+.right-cdc{
+    width: 23%;
+    border: none;
+    margin-right: 80px;
+
+}
+.sideBtn{
+      margin: 21px 0;
+    height: 60px;
+    width: 85%;
+    background: rgb(0, 82, 114);
+    color: white !important;
+    border: 1px solid silver;
+}
+}
+.sideBtn:active{
+background: #2c3e50;
+transform: translateY(7px);
+}
+.sideBtn:focus {
+  background-color: green; 
+  color: white !important;
+  border: 1px solid silver !important;;
+  border-color: white;
+  outline: none;
+  font-size: 18px; 
+}
+.sideBtn:hover {
+  background:green;
+}
+.sidenav{
+    margin-top: -170px;
+
+}
+.sidenav button{
+margin-left: 15px;
+border-radius: 12px;
+}
+
+
+.Legal_Address , .Shipping_Address , .Nationality , .Gender , .Name_LastName , .Document_ID , .Tax_Number , .Phone_Number, .Email{
+   width: 700px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 10px 115px;
+    flex-direction: column;
+    
+}
+.emailTemplate{
+    display: flex;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+     border: 1px solid white;
+     width: 700px;
+     height: 30x;
+     justify-content: space-around;
+     align-items: center;
+}
+.emailTemplate input{
+  height: 22px;
+    width: 246px;
+    margin: 7px;
+    text-align: center;
+}
+.emailTemplate button{
+    height: 34px;
+    width: 214px;
+    border-radius: 12px;
+    background: #2c3e50;
+    margin: 5px;
+    color: white;
+      border: 0.6px solid white;
+  box-shadow : 1px grey;
+}
+.headers{
+    margin: 3px;
+    color: white;
+    box-shadow: #00000083;
+}
+.emailTemplate .headers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+#inputLA{
+       text-align: center;
+    font-size: 20px;
+    width: 358px;
+    background: white;
+}
+.right-cdc{
+    transform: scale(1.2);
+    margin-top: 110px;
+    margin-left: 100px;
+    border: none;
+   
+}
+.right-cdc button{
+width: 80%;
+}
+.right-cdc .pair{
+    margin: 15px 0 15px 0;
+}
+    
+
+</style>
+
+
+Script_SideMenu.html
+
+
+<script>
+$(document).ready(function () {
+  $(".center-cdc > div").hide();
+
+  const firstSideBtnText = $(".sideBtn").first().text().trim();
+  if (firstSideBtnText) {
+    $("." + firstSideBtnText).show();
+  }
+
+  $(document).on("click", ".sideBtn", function () {
+    $(".center-cdc > div").hide();
+
+    const sideBtnText = $(this).text().trim();
+    if (sideBtnText) {
+      $("." + sideBtnText).show();
+    }
+  });
+});
+
+</script>
