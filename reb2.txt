@@ -667,11 +667,11 @@ C_visitor
   <div class="pageContent pageContent-cdc">
   <div class="left left-cdc">
     <div class="sidenav sidenav-vis" style="margin-top:-90px;">
-      <button class="sideBtn">ATM1</button>
-      <button class="sideBtn">ATM2</button>
-      <button class="sideBtn">Reset</button>
-      <button class="sideBtn">Safety</button>
-      <button class="sideBtn">Pairing</button>
+      <button class="sideBtn">A</button>
+      <button class="sideBtn">A</button>
+      <button class="sideBtn">R</button>
+      <button class="sideBtn">S</button>
+      <button class="sideBtn">P</button>
     </div>
   </div>
  <div style="margin-left:400px;" class="center center-cdc">
@@ -681,7 +681,7 @@ C_visitor
                  <label class="btnLabel">Customers new phone number</label>
                  <input id="numVis" type="number">
             </div> 
-        <div class="ATM1">
+        <div class="A">
             -
             <button class="copyBtn copyBtn-cdc">1111</button>
             <button class="copyBtn copyBtn-cdc">2222</button>
@@ -690,7 +690,7 @@ C_visitor
             <button class="copyBtn copyBtn-cdc"></button>
               
         </div>
-        <div class="ATM2">
+        <div class="">
             -
             <button class="copyBtn copyBtn-cdc">pt2</button>
             <button class="copyBtn copyBtn-cdc"></button>
@@ -699,7 +699,7 @@ C_visitor
             <button class="copyBtn copyBtn-cdc"></button>
             <button style="width:350px; border-radius: 12px;" onclick="SaPost()" class="copyBtn copyBtn-cdc">Post</button> 
         </div>
-          <div class="Reset">
+          <div class="R">
             -
             <button class="copyBtn copyBtn-cdc">re</button>
             <button class="copyBtn copyBtn-cdc"></button>
@@ -708,7 +708,7 @@ C_visitor
             <button class="copyBtn copyBtn-cdc"></button>
             <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
         </div>
-         <div class="Safety">
+         <div class="S">
             -
             <button class="copyBtn copyBtn-cdc">sa</button>
             <button class="copyBtn copyBtn-cdc"></button>
@@ -717,7 +717,7 @@ C_visitor
             <button class="copyBtn copyBtn-cdc"></button>
             <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
         </div>
-         <div class="Pairing">
+         <div class="P">
             -
             <button class="copyBtn copyBtn-cdc">pai</button>
             <button class="copyBtn copyBtn-cdc"></button>
