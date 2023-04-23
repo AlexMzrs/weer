@@ -1,0 +1,850 @@
+$(document).on("mousedown", function (event) {
+if (event.button === 1) {
+getSurvey();
+}
+
+function getSurvey()
+{
+  const x =
+"If you are satisfied with our conversation and services, we'd greatly"
++"\nappreciate if you could spare a few minutes to rate our interaction in"
++"\nthe follow-up message you'll receive shortly. Your feedback helps us"
++"\nimprove and provide the best possible experience.";
+
+
+  navigator.clipboard.writeText(x);
+}
+
+
+
+css_cdc
+
+<style>
+  .copyBtn-cdc
+{
+ width: 100%;
+ margin: 7px;
+}
+.left-cdc{
+width: 10%;
+border: none;
+background-image: linear-gradient(135deg, #002f4b, #004550);
+border-right: 1px solid white;
+
+
+
+}
+.center-cdc{
+
+flex-direction: column;
+    margin-left: 200px;
+    transform: scale(1.2);
+    margin-top: 99px;
+ 
+}
+.center-cdc p {
+      margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.pageContent-cdc{
+    justify-content: flex-start;
+}
+.pageContent-cdc p{
+    color: white !important;
+    font-size: 18px!important;
+}
+.right-cdc{
+    width: 23%;
+    border: none;
+    margin-right: 80px;
+
+}
+
+.Legal_Address ,
+.Shipping_Address , 
+.Nationality , 
+.Gender , 
+.Name_LastName , 
+.Document_ID , 
+.Tax_Number , 
+.Phone_Number, 
+.Email , 
+.ATM1,
+.ATM2,
+.Reset,
+.Safety,
+.Pairing{
+   width: 700px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 10px 115px;
+    flex-direction: column;
+    
+}
+.emailTemplate{
+    display: flex;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+     border: 1px solid white;
+     width: 700px;
+     height: 30x;
+     justify-content: space-around;
+     align-items: center;
+}
+.emailTemplate input{
+  height: 22px;
+    width: 246px;
+    margin: 7px;
+    text-align: center;
+}
+.emailTemplate button{
+    height: 34px;
+    width: 214px;
+    border-radius: 12px;
+    background: #2c3e50;
+    margin: 5px;
+    color: white;
+      border: 0.6px solid white;
+  box-shadow : 1px grey;
+}
+.headers{
+    margin: 3px;
+    color: white;
+    box-shadow: #00000083;
+}
+.emailTemplate .headers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+#inputLA{
+       text-align: center;
+    font-size: 20px;
+    width: 358px;
+    background: white;
+}
+#inputVis{
+       text-align: center;
+    font-size: 20px;
+    width: 358px;
+    background: white;
+}
+#numVis{
+       text-align: center;
+    font-size: 20px;
+    width: 358px;
+    background: white;
+}
+.right-cdc{
+    transform: scale(1.2);
+    margin-top: 110px;
+    margin-left: 100px;
+    border: none;
+   
+}
+.right-cdc button{
+width: 80%;
+}
+.right-cdc .pair{
+    margin: 15px 0 15px 0;
+}
+
+</style>
+css_mainStyle
+
+<style>
+  #route {
+  background-image: linear-gradient(135deg, #020f1b, #0099b1);
+  height: 1000px;
+
+  border: 1px solid #333;
+}
+.pageContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.pairs {
+  margin-top: 30px;
+  width: 400px;
+}
+.pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60px;
+}
+.btnLabel {
+  color: white;
+  margin: 6px;
+  border-bottom: 1px solid white;
+  width: 360px;
+  border-width: 360;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.copyBtn {
+  background: #2c3e50;
+  margin-top: 0px;
+  border: 1px solid white;
+
+  color: white;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+}
+
+.copyBtn:hover {
+  background-image: linear-gradient(135deg, #00417e, #0198af);
+}
+.copyBtn:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
+}
+.right {
+  border-left: 1px solid white;
+  width: 25%;
+}
+.left {
+  border-right: 1px solid white;
+  width: 25%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  width: 44%;
+  display: flex;
+
+  height: 1000px;
+}
+
+
+
+
+.btnLabel-home{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 9px;
+}
+.copyBtn-home
+{
+    margin-bottom: 9px;
+    height: 62px;
+    border-radius: 12px;
+}
+.pageContent-home{
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+
+.copyBtn-instrcutions{
+    width: 474px;
+    min-height: 40px;
+    
+}
+.pairs-instructions{
+    border: none;
+   
+}
+
+.pairs-instructions .pair{
+    margin: 10px;
+}
+
+</style>
+
+
+C_home1
+
+
+ <div class="pageContent pageContent-home">
+  <div class="pairs">
+    <div class="pair">
+      <div class="btnLabel btnLabel-home">Intro</div>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly check this out for you.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        I am sorry to hear it. I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        I am sorry to hear that. I will check this out for you right-away!
+      </button>
+    </div>
+
+    <div class="pair">
+      <div style="margin-top: 50px" class="btnLabel btnLabel-home">Survey</div>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+    </div>
+  </div>
+
+  <div class="pairs">
+    <div class="pair">
+      <div class="btnLabel btnLabel-home">Closing</div>
+      <button class="copyBtn copyBtn-home">
+       It was my pleasure. Thank you for your great cooperation throughout the process.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        I am glad to hear that. Thank you for your great cooperation too!
+      </button>
+      <button class="copyBtn copyBtn-home">
+       You are most welcome. Is there anything else I can assist you with for the time being?
+      </button>
+      <button class="copyBtn copyBtn-home">
+       If you have any additional questions or need further assistance, I'm more than happy to help you.
+      </button>
+    </div>
+
+    <div class="pair">
+      <div style="margin-top: 50px" class="btnLabel btnLabel-home">Survey</div>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+    </div>
+  </div>
+
+  <div class="pairs">
+    <div class="pair">
+      <div class="btnLabel btnLabel-home">Intro</div>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+    </div>
+
+    <div class="pair">
+      <div style="margin-top: 50px" class="btnLabel btnLabel-home">Survey</div>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+    </div>
+  </div>
+
+  <div class="pairs">
+    <div class="pair">
+      <div class="btnLabel btnLabel-home">Common</div>
+      <button class="copyBtn copyBtn-home">
+        Are you still connected?
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Since I havent heard you for a while I will now close this chat.
+        Please do not hesitate to contact us if you need further assistance.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        You have reached the english martket.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sorry I didnt understand you.
+      </button>
+      <button class="copyBtn copyBtn-home">
+       As much as I would love to help you, this is something beyond what we can do for customers.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Could you please provide me with the exact details for this transaction? Date/Amount/Receiver
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+      <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+        <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+        <button class="copyBtn copyBtn-home">
+        Sure! I will gladly assist you with this.
+      </button>
+    </div>
+  </div>
+</div>
+
+
+c_instuctions1
+
+ <div class="pageContent">
+  <div class="pairs pairs-instructions">
+    <div class="pair">
+      <label class="btnLabel">Change your shipping address</label>
+      <button class="copyBtn copyBtn-instrcutions">
+To change your shipping address with N26, follow these steps:
+
+1 Open the N26 app on your mobile device
+2 Tap on your profile picture in the top left corner
+3 Select "My Account" from the menu
+4 Tap on "Personal Details"
+5 Scroll down and tap on "Shipping Address"
+6 Tap on the pencil icon to edit your current address
+7 Update your address and tap "Save"   
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Change password</label>
+      <button class="copyBtn copyBtn-instrcutions">       
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Security."
+4 Tap "Change password."
+5 Enter your current password, then enter and confirm your new password.
+6 Tap "Save" to save your new password.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Confirmation PIN</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Open the N26 app on your mobile device and log in to your account.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Settings."
+4 Tap "Security" and then "Confirmation PIN."
+5 Select "Forgot PIN" and follow the prompts to verify your identity.
+6 Once your identity is verified, you'll be prompted to create a new confirmation PIN.
+7 Enter and confirm your new confirmation PIN, then tap "Save."
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Phone number change</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Open the N26 app on your mobile device and log in to your account.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Settings."
+4 Tap "My Account" and then "Personal Information."
+5 Select "Phone Number" and then tap the pencil icon to edit.
+6 Enter your new phone number and verify it by entering the confirmation code that N26 sends to your new number via SMS.
+7 Once your new phone number is verified, your account information will be updated, and you will receive any future SMS messages or notifications from N26 on your new number.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions">
+
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions">
+
+      </button>
+    </div>
+  </div>
+   <div class="pairs pairs-instructions">
+    <div class="pair">
+      <label class="btnLabel">Statement of fees</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Statements."
+4 Select "Statement of fees."
+5 Choose the time period for which you'd like to download the statement.
+6 Select the language and format (PDF or JSON) you prefer for the statement.
+7 Tap "Download" to download the statement to your device.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Balance statement</label>
+      <button class="copyBtn copyBtn-instrcutions">1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Statements."
+4 Select "Balance statement."
+5 Choose the time period for which you'd like to download the statement.
+6 Select the language and format (PDF or JSON) you prefer for the statement.
+7 Tap "Download" to download the statement to your device.</button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Account confirmation</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Settings."
+4 Scroll down and select "Account."
+5 Select "Account confirmation."
+6 Choose the language and format (PDF or JSON) you prefer for the confirmation document.
+7 Tap "Download" to download the confirmation document to your device.</button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Pair new device</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+5 Scroll down and select "Security."
+6 Tap "Trusted Devices."
+7 Tap "Add Trusted Device" and follow the prompts to pair your new device with your N26 account.
+8 You may be asked to confirm your identity by entering your N26 login credentials or providing a fingerprint or face scan.
+9 Once your new device is paired, it will be able to access your N26 account and you'll receive push notifications for transactions and other account activity.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Unpair my device</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Go to the N26 web app at https://web.n26.com/ and log in to your account.
+2 Click on your profile picture in the top right corner of the screen.
+3 Select "Settings" from the dropdown menu.
+4 Click on "Security" and then "Trusted Devices."
+5 Find the device that you want to unpair and click on it.
+6 Click "Remove" to confirm that you want to unpair the device.
+      </button>
+    </div>
+
+
+  </div>
+   <div class="pairs pairs-instructions">
+    <div class="pair">
+      <label class="btnLabel">Dispute</label>
+      <button class="copyBtn copyBtn-instrcutions">
+If you notice an unauthorized transaction on your N26 account, I strongly recomend you to follow these steps:
+
+1 Open the N26 app and go to the "Activity" tab to view the transaction in question.
+2 If you don't recognize the transaction or believe it to be unauthorized, select the transaction and tap "Report."
+3 Choose "I didn't make this transaction" and provide any relevant details.
+4 N26 will investigate the transaction and may reach out to you for additional information or documentation.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Reorder my card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "My Account."
+4 Scroll down and select "Card and PIN."
+5 Select the option to "Order a new card."
+6 Choose the type of card you want to order (standard, metal, or business).
+7 Confirm or update your delivery address.
+8 Review the card details and fees, and then confirm the order.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">New virtual card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+The instruction for downloading a new virtual card:
+
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "My Account."
+4 Scroll down and select "Card and PIN."
+5 Select the option to "Order a new virtual card."
+6 Choose the type of virtual card you want to order.
+7 Confirm the details of the virtual card and any associated fees.
+8 Confirm the order.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Block your card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+In this case I strongly recomend you to immediately block your card by following these steps:
+
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "My Account."
+4 Scroll down and select "Card and PIN."
+5 Select the option to "Lock card."
+6 Follow the instructions on the screen to confirm the bloc
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions"></button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions"></button>
+    </div>
+  </div>
+   <div class="pairs pairs-instructions">
+   <div class="pair">
+      <label class="btnLabel">Fully verified chat</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+5 Scroll down and select "Security."
+6 Tap "Trusted Devices."
+7 Tap "Add Trusted Device" and follow the prompts to pair your new device with your N26 account.
+8 You may be asked to confirm your identity by entering your N26 login credentials or providing a fingerprint or face scan.
+9 Once your new device is paired, it will be able to access your N26 account and you'll receive push notifications for transactions and other account activity.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Chat as a visitor</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions"></button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions"></button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel"></label>
+      <button class="copyBtn copyBtn-instrcutions"></button>
+    </div>
+  </div>
+</div>
+
+
+C_visitor
+
+  <div class="pageContent pageContent-cdc">
+  <div class="left left-cdc">
+    <div class="sidenav sidenav-vis" style="margin-top:-90px;">
+      <button class="sideBtn">ATM1</button>
+      <button class="sideBtn">ATM2</button>
+      <button class="sideBtn">Reset</button>
+      <button class="sideBtn">Safety</button>
+      <button class="sideBtn">Pairing</button>
+    </div>
+  </div>
+ <div style="margin-left:400px;" class="center center-cdc">
+        <div style="margin-bottom:84px;" id="cstName" class="pair">
+                <label class="btnLabel">Customers name</label>
+                <input id="inputVis" type="text">
+                 <label class="btnLabel">Customers new phone number</label>
+                 <input id="numVis" type="number">
+            </div> 
+        <div class="ATM1">
+            -
+            <button class="copyBtn copyBtn-cdc">1111</button>
+            <button class="copyBtn copyBtn-cdc">2222</button>
+            <button class="copyBtn copyBtn-cdc">Is the process completely clear to you? If you have any questions or need further clarification, please don't hesitate to ask.</button>
+            <button class="copyBtn copyBtn-cdc">Great! We are looking forward to helping you regain access to your account. Once you've completed the necessary steps, we'll be eagerly awaiting your return to continue the process.</button>
+            <button class="copyBtn copyBtn-cdc"></button>
+              
+        </div>
+        <div class="ATM2">
+            -
+            <button class="copyBtn copyBtn-cdc">pt2</button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="SaPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+          <div class="Reset">
+            -
+            <button class="copyBtn copyBtn-cdc">re</button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+         <div class="Safety">
+            -
+            <button class="copyBtn copyBtn-cdc">sa</button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+         <div class="Pairing">
+            -
+            <button class="copyBtn copyBtn-cdc">pai</button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button class="copyBtn copyBtn-cdc"></button>
+            <button style="width:350px; border-radius: 12px;" onclick="PnPost()" class="copyBtn copyBtn-cdc">Post</button> 
+        </div>
+        
+
+        
+    </div>
+
+  </div>
+  
+</div>
+
+css_mainStyle
+
+<style>
+  #route {
+  background-image: linear-gradient(135deg, #020f1b, #0099b1);
+  height: 1000px;
+
+  border: 1px solid #333;
+}
+.pageContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.pairs {
+  margin-top: 30px;
+  width: 400px;
+}
+.pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60px;
+}
+.btnLabel {
+  color: white;
+  margin: 6px;
+  border-bottom: 1px solid white;
+  width: 360px;
+  border-width: 360;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.copyBtn {
+  background: #2c3e50;
+  margin-top: 0px;
+  border: 1px solid white;
+
+  color: white;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+}
+
+.copyBtn:hover {
+  background-image: linear-gradient(135deg, #00417e, #0198af);
+}
+.copyBtn:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
+}
+.right {
+  border-left: 1px solid white;
+  width: 25%;
+}
+.left {
+  border-right: 1px solid white;
+  width: 25%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  width: 44%;
+  display: flex;
+
+  height: 1000px;
+}
+
+
+
+
+.btnLabel-home{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 9px;
+}
+.copyBtn-home
+{
+    margin-bottom: 9px;
+    height: 62px;
+    border-radius: 12px;
+}
+.pageContent-home{
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+
+.copyBtn-instrcutions{
+    width: 474px;
+    min-height: 40px;
+    
+}
+.pairs-instructions{
+    border: none;
+   
+}
+
+.pairs-instructions .pair{
+    margin: 10px;
+}
+
+</style>
