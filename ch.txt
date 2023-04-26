@@ -1,0 +1,634 @@
+function opsTemplate(type) {
+  if (type == "un") 
+  {
+  var idValue = document.getElementById("unId").value;
+  var infValue = document.getElementById("unInf").value;
+
+    var post =
+      "Reason: Unauthorized \nTransaction ID: " +
+      idValue +
+      "\n Talked to the merchant: No \nAdditional information: " +
+      infValue;
+    alert(post);
+  }
+
+  
+  else if (type == "au") 
+  {
+  var idValue = document.getElementById("auId").value;
+  var infValue = document.getElementById("auInf").value;
+
+    var post =
+      "Reason: Authorized \nTransaction ID: " +
+      idValue +
+      "\n Talked to the merchant:  \nAdditional information: " +
+      infValue;
+    alert(post);
+  }
+}
+
+
+//// cha.html
+
+<div class="pageContent">
+    <div class="headerAndContent">
+<p class="pageHeader">Chargeback and dispute</p>
+    <div class="ChContainer">
+        <div class="leftCh">
+                 <div class="pair">
+                <label class="btnLabel">Chargeback</label>
+                <button class="copyBtn">
+A chargeback is a simple way to refund customers after payment issues. 
+N26, with Mastercard's help, allows you to dispute transactions for problems like undelivered goods, ensuring you can recover your funds.
+                </button>
+            </div>
+            <div class="pair">
+                <label class="btnLabel">Double Charge</label>
+                <button class="copyBtn">
+Sometimes, you might see two charges due to technical issues or a disconnection at the payment terminal.
+Rest assured, one of these charges is temporary, and your money will be returned within 12 days. 
+If it doesn't happen within that time frame, we are here to help you get your money back.
+                </button>
+            </div>
+               <div class="pair">
+                <label class="btnLabel">Dispute</label>
+                <button class="copyBtn">
+To dispute a payment with N26, follow these steps:
+
+-Log in to your N26 account via the app or website.
+-Locate the transaction you wish to dispute in your transaction history.
+-Click on the transaction to view its details.
+-Select "Get Help with this transaction".
+-Provide the required information and a description of the issue.
+-Submit the dispute form.
+
+N26 will then investigate the matter and, if necessary, work with Mastercard to resolve the dispute. 
+Keep in mind that the resolution process can take some time, so it's essential to be patient and cooperate with any additional requests for information from N26.
+                </button>
+            </div>
+    
+               <div class="pair">
+                <label class="btnLabel">AA</label>
+                <button class="copyBtn">
+If the 'Get help' button isn't visible when you choose a transaction, it means the transaction is still being authorized (reserved). 
+You'll need to wait until the charge moves to the presentment stage (completed) before taking action.
+                </button>
+            </div>
+        </div>
+      
+        <div  class="auth">
+            <p style="background: rgba(4, 255, 4, 0.315);">Authorized transaction</p>
+            <button class="copyBtn">Sure I will check this out right away. 
+Could you please provide me with the exact details of this transaction: Date/Merchant/Amount ?</button>
+            <button class="copyBtn">Thank you for feedback. If I may ask, have you contacted the merchant directly about this payment?</button>
+            <button class="copyBtn">In this case I strongly recommend you to contact them directly since this is the easiest and fastest way to get your funds back.</button>
+            <button class="copyBtn">In case you will face any issue with this or the merchant does not want to cooperate or in case they are not responding
+at all, then we can definitely help you and ask for a refund for you.
+            </button>
+            <button class="copyBtn">I understand your concerns. If you're worried about being charged again, unfortunately, we cannot block payments to specific merchants. 
+In this situation, your option is to request a new card. This will deactivate your current card and provide you with a new one bearing a different card number. 
+Please be aware that the new card incurs a 10-euro fee, but the standard delivery is complimentary. You can expect to receive your card within 15 working days.
+            </button>
+            <button class="copyBtn">Sure. Kindly note that this process has first to be reviewed by the relevant team before we have any update. 
+Once we will have any update we will immediately notify you via your secure inbox. Kindly bear with me for a while.
+            </button>
+            <button class="copyBtn">Thank you for your patience. I want to inform you that I have already brought the matter to the attention of the relevant team and asked for a refund.</button>
+            <button class="copyBtn">Thank you for brought this to our attention. Is there anything else I can assist you with for the time being?</button>
+          
+
+            <div class="CgTemplate">
+                <div class="pair">
+                    <label class="btnLabel">transaction ID</label>
+                    <input id="auId" type="text">
+                </div>
+                <div class="pair">
+                    <label  class="btnLabel">additional information</label>
+                    <textarea id="auInf" type="text"></textarea>
+                </div>            
+            </div>
+            <div class="CgTemplate">
+                <button class="tempBtn" onclick="opsTemplate('au')" style="background: #7ac6dd;">Ops Template</button>
+                <button class="tempBtn" 
+                onclick="getPost('Cst reported an authorized transaction', 
+                'Informed cst about the process/ case transferred to ops with post\n', 
+                'waiting for chargeback request completion')" 
+                style="background-image: linear-gradient(135deg, #00417e, #0f8192); color: white;" >Case post</button>
+            </div>
+
+        </div>
+        <div class="una">
+            <p style="background: rgba(240, 0, 0, 0.39);">Unauthorized transaction</p>
+            <button class="copyBtn">Thank you for reporting this. For security reasons I have just temporarily blocked your card.</button>
+            <button class="copyBtn">Could you please provide me with the exact details of this transaction: Date/Merchant/Amount ?</button>
+            <button class="copyBtn">I am really sorry about this frustrating experience. 
+For the time being, what I can do from my part is to reorder your card, free of charge. </button>
+            <button class="copyBtn">By doing this, your current card will automatically be terminated, avoiding for further unauthorized actions to occur </button>
+            <button class="copyBtn">**CHECK FOR SA**</button>
+            <button class="copyBtn">**Delivery method</button>
+            <button class="copyBtn">
+Concerning the unauthorized transaction, I want to inform you that I have already brought the matter to the attention of the responsible department and asked for a chargeback. 
+As soon as your situation has been evaluated, we will promptly update you via your secure inbox.
+            </button>
+            <button class="copyBtn">From our side, we will do our best to refund you and we strongly encourage you to take a look at this link which contains useful information on how to keep your account secured.</button>
+            <button style="height: 40px; min-height: 10px;" class="copyBtn">Thank you for brought this to our attention. Is there anything else I can assist you with for the time being?</button>
+            <div class="CgTemplate">
+                <div class="pair">
+                    <label class="btnLabel">transaction ID</label>
+                    <input id="unId" type="text">
+                </div>
+                <div class="pair">
+                    <label  class="btnLabel">additional information</label>
+                    <textarea id="unInf" type="text"></textarea>
+                </div>            
+            </div>
+            <div class="CgTemplate">
+                <button class="tempBtn" onclick="opsTemplate('un')"style="background: #7ac6dd;">Ops Template</button>
+                <button class="tempBtn" 
+                onclick="getPost('Cst reported an unauthorized transaction', 
+                'card: blocked/reordered free of charge, cst informed about the process / case transferred to ops with post\n', 
+                'waiting for chargeback request completion')" 
+                style="background-image: linear-gradient(135deg, #00417e, #0f8192); color: white;" >Case post</button>
+            </div>
+            
+        </div>
+
+
+           <div class="rightCh">
+                      <div class="pair">
+                <label class="btnLabel">Subscription</label>
+                <button class="copyBtn">
+In this case I recommend you to talk directly with the merchant and ask about this charge.
+Since you have stopped the subscription then you can ask for a refund which will happen immediately.
+                </button>
+            </div>
+               <div class="pair">
+                <label class="btnLabel">Unauthorized</label>
+                <button class="copyBtn">
+If you notice an unauthorized transaction, as N26 we are strongly recommend you to block and reorder your N26 card to prevent further fraud before we can process your request.
+In case you having issues doing this from the app, we will gladly do this for you.
+                </button>
+            </div>
+               <div class="pair">
+                <label class="btnLabel">AA</label>
+                <button class="copyBtn">
+I appreciate your input. It appears that the payment is currently in the "Authorization" stage, and for a dispute to be initiated, it must first reach the "Presentment" stage. 
+In other words, the transaction must be completed before a refund request can be made, and at the moment, your payment is only reserved and pending for merchant to collect it.
+                </button>
+            </div>
+               <div class="pair">
+                <label class="btnLabel">Fraud occurs</label>
+                <button class="copyBtn">
+There are three primary methods of fraud involving debit or credit cards:
+
+1-Your card is skimmed and duplicated, which can occur when using your card at a compromised ATM designed to steal card information.
+2-Your card details are acquired online, which may result from:
+a. Purchasing from a deceitful website
+b. Having your information intercepted during a legitimate transaction
+c. Experiencing a security breach on your online shopping account
+3-Your actual card is taken and utilized for making unauthorized purchases.
+                </button>
+
+    </div>
+    </div>
+        
+</div>
+
+
+cha css
+
+
+<style>
+
+  .headerAndContent{
+        transform: scale(1.09);
+    margin-top: 50px;
+}
+
+  
+.auth , .una {
+    border: 1px solid white;
+    height: 700px;
+    width: 600px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+} 
+.ChContainer{
+    margin: 60px;
+    display: flex;
+    align-items: center;
+}  
+.ChContainer button ,p {
+    height: 30px;
+    margin: 5px;
+    width: 98%;
+} 
+.ChContainer p {
+border: 1px solid silver;;
+text-align: center;
+justify-content: center;
+display: flex;
+align-items: center;
+font-size: 25px;
+color: white;
+} 
+.leftCh,.rightCh{
+
+    width: 360px;
+    height: 800px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -40px;
+
+}
+
+.leftCh button{
+width: 280px;
+margin-left: 40px;
+height: auto;
+}
+.rightCh button{
+width: 280px;
+margin-right: 40px;
+height: auto;
+}
+.leftCh label{
+width: 160px;
+margin-left: 40px;
+}
+.rightCh button{
+width: 280px;
+margin-right: 40px;
+}
+.rightCh label{
+width: 160px;
+margin-right: 40px;
+}
+.ChContainer .copyBtn
+{
+    height: auto;
+}
+.CgTemplate label
+{
+    width: 170px;
+    font-size: 16px;
+}
+.CgTemplate
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.una  .tempBtn
+{
+    width:  30%;
+    align-self: center;
+    height: 40px;
+    border-radius: 12px;
+    margin-left: 0px;
+}
+.una textarea ,input{
+    width: 270px;
+    height: 25px;
+    text-align: center;
+}
+
+.auth  .tempBtn
+{
+    width:  30%;
+    align-self: center;
+    height: 40px;
+    border-radius: 12px;
+    margin-left: 0px;
+}
+.auth textarea ,input{
+    width: 270px;
+    height: 25px;
+    text-align: center;
+}
+</style>
+
+
+mainstyle
+
+.pageHeader {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-bottom: -62px;
+   font-weight: bold;
+  
+}
+
+instructions
+
+
+<div class="pageContent">
+  <div class="pairs pairs-instructions">
+    <div class="pair">
+      <label class="btnLabel">Change your shipping address</label>
+      <button class="copyBtn copyBtn-instrcutions">
+To change your shipping address with N26, follow these steps:
+
+1 Open the N26 app on your mobile device
+2 Tap on your profile picture in the top left corner
+3 Select "My Account" from the menu
+4 Tap on "Personal Details"
+5 Scroll down and tap on "Shipping Address"
+6 Tap on the pencil icon to edit your current address
+7 Update your address and tap "Save"   
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Change password</label>
+      <button class="copyBtn copyBtn-instrcutions">       
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Security."
+4 Tap "Change password."
+5 Enter your current password, then enter and confirm your new password.
+6 Tap "Save" to save your new password.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Confirmation PIN</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Open the N26 app on your mobile device and log in to your account.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Settings."
+4 Tap "Security" and then "Confirmation PIN."
+5 Select "Forgot PIN" and follow the prompts to verify your identity.
+6 Once your identity is verified, you'll be prompted to create a new confirmation PIN.
+7 Enter and confirm your new confirmation PIN, then tap "Save."
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Phone number change</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Open the N26 app on your mobile device and log in to your account.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Scroll down and select "Settings."
+4 Tap "My Account" and then "Personal Information."
+5 Select "Phone Number" and then tap the pencil icon to edit.
+6 Enter your new phone number and verify it by entering the confirmation code that N26 sends to your new number via SMS.
+7 Once your new phone number is verified, your account information will be updated, and you will receive any future SMS messages or notifications from N26 on your new number.
+      </button>
+    </div>
+        <div class="pair">
+      <label class="btnLabel">SEPA transfer</label>
+      <button class="copyBtn copyBtn-instrcutions">
+In order to make a SEPA bank transfer follow these steps:
+
+-From the Home screen choose the Send money tab
+-Select a recipient from the contact list
+-Enter the amount and select Continue
+-Enter an optional reference text and select Continue
+-Choose to send it as an Instant Bank Transfer or Standard Bank Transfer
+-Enter your confirmation PIN
+-Confirm the transfer on the review screen
+      </button>
+    </div>
+
+            <div class="pair">
+      <label class="btnLabel">Moneybeam transfer</label>
+      <button class="copyBtn copyBtn-instrcutions">
+In order to make a to a friend via 'Moneybeam', follow these steps:
+
+-Select 'Send Money'
+-In the contact list, select a recipient with an N26 icon on their profile
+-Enter the amount and select Continue
+-Enter an optional reference text or GIF* and select Continue
+-Enter your confirmation PIN
+-Confirm the transfer on the review screen
+
+
+      </button>
+    </div>
+
+  
+  </div>
+   <div class="pairs pairs-instructions">
+    <div class="pair">
+      <label class="btnLabel">Statement of fees</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Statements."
+4 Select "Statement of fees."
+5 Choose the time period for which you'd like to download the statement.
+6 Select the language and format (PDF or JSON) you prefer for the statement.
+7 Tap "Download" to download the statement to your device.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Balance statement</label>
+      <button class="copyBtn copyBtn-instrcutions">1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Statements."
+4 Select "Balance statement."
+5 Choose the time period for which you'd like to download the statement.
+6 Select the language and format (PDF or JSON) you prefer for the statement.
+7 Tap "Download" to download the statement to your device.</button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Account confirmation</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "Settings."
+4 Scroll down and select "Account."
+5 Select "Account confirmation."
+6 Choose the language and format (PDF or JSON) you prefer for the confirmation document.
+7 Tap "Download" to download the confirmation document to your device.</button>
+    </div>
+
+        <div class="pair">
+      <label class="btnLabel">Transfer confirmation</label>
+      <button class="copyBtn copyBtn-instrcutions">
+You can download your transfer confirmation by following these steps:
+    
+-Go to yourTransactions list (home screen)
+-Locate and select the specific debit transfer
+-Scroll down to the Transaction Information and tap PDF by selecting Transfer Confirmation.
+      </button>
+    </div>
+
+      <div class="pair">
+      <label class="btnLabel">Annual balance</label>
+      <button class="copyBtn copyBtn-instrcutions">
+To download it, login to your N26 mobile app, from the Home screen tap on the 3 dots at the top right and select 
+Statement > Average annual balance.
+Here, just tap on the required document and this will automatically download to your smartphone. 
+If you cannot see the Average annual balance button, you may need to update the app from your store.
+      </button>
+    </div>
+
+        <div class="pair" style="margin-top:20px">
+      <label class="btnLabel">BIC and IBAN</label>
+      <button class="copyBtn copyBtn-instrcutions">
+You can find your IBAN and BIC number on your balance statements or in 'Account details' from the mobile app or WebApp.
+All our IBANs start with DE (Germany ), IT (Italy), ES (Spain) or FR (France) and have a different structure depending on the country.
+      </button>
+    </div>
+
+
+
+
+
+  </div>
+   <div class="pairs pairs-instructions">
+  
+
+    <div class="pair">
+      <label class="btnLabel">Reorder my card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "My Account."
+4 Scroll down and select "Card and PIN."
+5 Select the option to "Order a new card."
+6 Choose the type of card you want to order (standard, metal, or business).
+7 Confirm or update your delivery address.
+8 Review the card details and fees, and then confirm the order.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">New virtual card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+The instruction for downloading a new virtual card:
+
+-Log into your account and open the Cards-tab in the bottom right corner.
+-Tap on ‘Get an additional card’.
+-Select ‘Virtual’ at the top, then tap ‘Choose’ at the bottom.
+-Read and agree with the terms and conditions, then tap ‘Generate virtual card’.
+-Add your virtual card to Apple Pay or Google Pay or skip this step..
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Block your card</label>
+      <button class="copyBtn copyBtn-instrcutions">
+In this case I strongly recomend you to immediately block your card by following these steps:
+
+1 Log in to your N26 account on the N26 mobile app.
+2 Tap on your profile picture in the top left corner of the screen.
+3 Select "My Account."
+4 Scroll down and select "Card and PIN."
+5 Select the option to "Lock card."
+6 Follow the instructions on the screen to confirm the bloc
+      </button>
+    </div>
+
+      <div class="pair">
+      <label class="btnLabel">Change card PIN</label>
+      <button class="copyBtn copyBtn-instrcutions">
+In order to change your card PIN simply follow these steps:
+
+-Open the N26 app and choose ‘Cards’ from the bottom right-hand
+-Tap ‘Card Settings’ and select the relevant card
+-Select ‘Reset PIN’
+-Enter the 10-digit number that appears on the front or back of your card
+-Choose a new PIN code and confirm
+      </button>
+    </div>
+
+    <div  style="margin-top: 20px;" class="pair">
+      <label class="btnLabel">Card limits</label>
+      <button style="height:90px" class="copyBtn copyBtn-instrcutions">
+In order to change your card limits simply follow these steps:
+
+-Log in and go to Cards
+-Keep swiping until the desired card appears
+-Tap on Card settings
+-Tap on Daily limits
+-Make your desired change
+      </button>
+    </div>
+
+        <div style="margin-top: 20px;" class="pair">
+      <label class="btnLabel">Apple/Google</label>
+      <button style="height:90px"  class="copyBtn copyBtn-instrcutions">
+In order to link your card to 'Appel pay' or 'Google pay' just follow these steps:
+
+-Login to your N26 account
+-Go to 'Cards'
+-Select 'Card Settings' and swipe to select the card you want to add
+-Select 'Add to Apple Pay' or 'Add to Google Pay'
+      </button>
+    </div>
+  </div>
+   <div class="pairs pairs-instructions">
+   <div class="pair">
+      <label class="btnLabel">Fully verified chat</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+5 Scroll down and select "Security."
+6 Tap "Trusted Devices."
+7 Tap "Add Trusted Device" and follow the prompts to pair your new device with your N26 account.
+8 You may be asked to confirm your identity by entering your N26 login credentials or providing a fingerprint or face scan.
+9 Once your new device is paired, it will be able to access your N26 account and you'll receive push notifications for transactions and other account activity.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Chat as a visitor</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Pair new device</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Download the N26 mobile app on your new device.
+2 Open the app and select "Register" to create a new account or "Log in" if you already have an account.
+3 Follow the prompts to enter your personal information and verify your identity.
+4 Once you've logged in to your N26 account on your new device, tap on your profile picture in the top left corner of the screen.
+5 Scroll down and select "Security."
+6 Tap "Trusted Devices."
+7 Tap "Add Trusted Device" and follow the prompts to pair your new device with your N26 account.
+8 You may be asked to confirm your identity by entering your N26 login credentials or providing a fingerprint or face scan.
+9 Once your new device is paired, it will be able to access your N26 account and you'll receive push notifications for transactions and other account activity.
+      </button>
+    </div>
+
+    <div class="pair">
+      <label class="btnLabel">Unpair my device</label>
+      <button class="copyBtn copyBtn-instrcutions">
+1 Go to the N26 web app at https://web.n26.com/ and log in to your account.
+2 Click on your profile picture in the top right corner of the screen.
+3 Select "Settings" from the dropdown menu.
+4 Click on "Security" and then "Trusted Devices."
+5 Find the device that you want to unpair and click on it.
+6 Click "Remove" to confirm that you want to unpair the device.
+      </button>
+    </div>
+
+      <div class="pair">
+      <label class="btnLabel">Dispute</label>
+      <button class="copyBtn copyBtn-instrcutions">
+If you notice an unauthorized transaction on your N26 account, I strongly recomend you to follow these steps:
+
+1 Open the N26 app and go to the "Activity" tab to view the transaction in question.
+2 If you don't recognize the transaction or believe it to be unauthorized, select the transaction and tap "Report."
+3 Choose "I didn't make this transaction" and provide any relevant details.
+4 N26 will investigate the transaction and may reach out to you for additional information or documentation.
+      </button>
+    </div>
+  </div>
+</div>
