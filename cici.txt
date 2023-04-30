@@ -1,0 +1,576 @@
+cvici
+
+<div class="pageContent pageContent-vis">
+  <div class="left left-cdc">
+    <div class="sidenav sidenav-vis" style="margin-top: -90px">
+      <button class="sideBtn">ATM1</button>
+      <button class="sideBtn">ATM2</button>
+      <button class="sideBtn">Reset</button>
+      <button class="sideBtn">Safety</button>
+      <button class="sideBtn">Pairing</button>
+    </div>
+  </div>
+  <div class="center_right">
+    <div class="questions">
+      <div class="pair">
+        <label class="btnLabel">Phone number</label>
+        <button class="copyBtn">
+          If I may ask, ?
+        </button>
+      </div>
+      <div class="pair">
+        <label class="btnLabel">Phone number</label>
+        <button class="copyBtn">
+          If I may ask, ?
+        </button>
+      </div>
+      <div class="pair">
+        <label class="btnLabel">Phone number</label>
+        <button class="copyBtn">
+          If I may ask, 
+        </button>
+      </div>
+    </div>
+    <div class="Main">
+      <div class="centerDivs" id="ATM1">
+        <div class="Vcenter">
+          <button class="copyBtn copyBtn-cdc">1111</button>
+          <button class="copyBtn copyBtn-cdc">2222</button>
+          <button class="copyBtn copyBtn-cdc">
+            Is the process completely clear to you? If you have any questions or
+            need further clarification, please don't hesitate to ask.
+          </button>
+          <button class="copyBtn copyBtn-cdc">
+            Great! We are looking forward to helping you regain access to your
+            account. Once you've completed the necessary steps, we'll be eagerly
+            awaiting your return to continue the process.
+          </button>
+          <div class="tableDiv">
+            <table class="styled-table">
+              <tbody>
+                <tr>
+                  <td>Reason</td>
+                  <td>PNC</td>
+                </tr>
+                <tr>
+                  <td>New phone number</td>
+                  <td><input id="atmNum" type="number" /></td>
+                </tr>
+                <tr>
+                  <td>Time chat ended</td>
+                  <td><input id="atmTime" type="time" /></td>
+                </tr>
+                <tr>
+                  <td>Date</td>
+                  <td><h3 id="todaysDate"></h3></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="postBtns">
+              <button class="tempBtn" onclick="atmPost()">
+                Get profile post
+              </button>
+              <button class="postBtn" onclick="atmCasePost()">
+                Get case post
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="centerDivs" id="ATM2" style="display: none">
+        <div class="Vcenter">
+          <button id="copyBtn copyBtn-cdc">pt2</button>
+          <button class="copyBtn copyBtn-cdc"></button>
+          <button class="copyBtn copyBtn-cdc"></button>
+          <button class="copyBtn copyBtn-cdc"></button>
+          <button class="copyBtn copyBtn-cdc"></button>
+        </div>
+        <div class="Vright">
+          <p>TOO2</p>
+        </div>
+      </div>
+      <div class="centerDivs" id="Reset" style="display: none">
+        <div class="Vcenter">
+          <button class="copyBtn copyBtn-cdc">
+
+          </button>
+          <button class="copyBtn copyBtn-cdc">
+
+          </button>
+          <button class="copyBtn copyBtn-cdc">
+
+          </button>
+          <button class="copyBtn copyBtn-cdc">
+
+          </button>
+          <div class="inputsDiv">
+            <h4>Same ?</h4>
+            <select name="sameDocSel" id="sameDocSel">
+              <option value="Yes">Yes</option>
+              <option value="No" selected>No</option>
+            </select>
+
+            <h4> in good ?</h4>
+            <select name="docCondSel" id="docCondSel">
+              <option value="Yes">Yes</option>
+              <option value="No" selected>No</option>
+            </select>
+
+            <h4> ?</h4>
+            <select name="natSel" id="natSel">
+              <option value="Yes">Yes</option>
+              <option value="No" selected>No</option>
+            </select>
+
+            <h4>Forget  ?</h4>
+            <select name="pinSel" id="pinSel">
+              <option value="Yes">Yes</option>
+              <option value="No" selected>No</option>
+            </select>
+          </div>
+          <div class="tempBtns">
+            <button class="btnTemplate" onclick="displayTemplate(1)">
+              Phon
+            </button>
+            <button class="btnTemplate" onclick="displayTemplate(2)">
+              Ema
+            </button>
+            <button class="btnTemplate" onclick="displayTemplate(3)">
+              Pair
+            </button>
+          </div>
+          <div id="rePn" class="tableDiv" style="display: none">
+            <table class="styled-table">
+              <tbody>
+                <tr>
+                  <td> </td>
+                  <td><input id="reNum" type="text" /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><input id="atmTime" type="time" /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><h3 id="todaysDate"></h3></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="postBtns">
+              <button class="tempBtn" onclick="rePn(1)">
+                Get template
+              </button>
+              <button class="postBtn" onclick="rePnPost()">
+                Get case post
+              </button>
+            </div>
+          </div>
+          <div id="reEm" class="tableDiv" style="display: none">
+            <table class="styled-table">
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td><input id="reEmail" type="text" /></td>
+                </tr>
+                <tr>
+                  <td>  forgot?</td>
+                  <td><input id="re" type="text" /></td>
+                </tr>
+                <tr>
+                  <td>  </td>
+                  <td><input id="atmTime" type="text" /></td>
+                </tr>
+                <tr>
+                  <td>  </td>
+                  <td><input id="atmTime" type="text" /></td>
+                </tr>
+              </tbody>
+            </table>
+          <div class="postBtns">
+              <button class="tempBtn" onclick="rePn(2)">
+                Get template
+              </button>
+              <button class="postBtn" onclick="rePnPost()">
+                Get case post
+              </button>
+            </div>
+          </div>
+          <div id="rePa" class="tableDiv" style="display: none">
+            <table class="styled-table">
+              <tbody>
+                <tr>
+                  <td>Reason</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>New  </td>
+                  <td><input id="atmNum" type="number" /></td>
+                </tr>
+                <tr>
+                  <td>Time  </td>
+                  <td><input id="atmTime" type="time" /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><h3 id="todaysDate"></h3></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="postBtns">
+              <button class="tempBtn" onclick="rePn(3)">
+                Get profile post
+              </button>
+              <button class="postBtn" onclick="atmCasePost(3)">
+                Get case post
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="centerDivs" id="Safety" style="display: none">
+        -
+        <button class="copyBtn copyBtn-cdc">sa</button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button
+          style="width: 350px; border-radius: 12px"
+          onclick="PnPost()"
+          class="copyBtn copyBtn-cdc"
+        >
+          Post
+        </button>
+      </div>
+      <div class="centerDivs" id="Pairing" style="display: none">
+        -
+        <button class="copyBtn copyBtn-cdc">pai</button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button class="copyBtn copyBtn-cdc"></button>
+        <button
+          style="width: 350px; border-radius: 12px"
+          onclick="PnPost()"
+          class="copyBtn copyBtn-cdc"
+        >
+          Post
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+css
+
+
+<style>
+.pageContent-vis {
+  justify-content: flex-start;
+}
+.pageContent-vis .left-cdc {
+  width: 10%;
+}
+.center_right {
+  width: 90%;
+  height: 100%;
+}
+
+.Main .copyBtn {
+  width: 60%;
+  min-height: 60px;
+  margin: 4px 0px 4px 0px;
+  height: auto;
+}
+.centerDivs {
+  width: 100%;
+  height: 820px;
+  display: flex;
+
+  align-items: center;
+}
+.Vcenter > :first-child {
+  margin-top: 100px;
+}
+.questions {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+
+}
+.questions label {
+  width: 160px;
+}
+.questions button {
+  width: 300px;
+  margin: 0px 40px 0px 40px;
+}
+.Main {
+
+  display: flex;
+}
+.Vcenter {
+  width: 100%;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Vcenter table {
+  background-image: linear-gradient(135deg, #2f456dad, #6c83e9ad);
+
+  border: 1px solid silver;
+}
+.Vcenter td {
+  width: 300px;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+}
+.Vcenter tr {
+  height: 40px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  color: white;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  color: white;
+}
+
+.tableDiv {
+  display: flex;
+  height: 100px;
+  margin-top: 20px;
+}
+.tempBtn {
+  margin: 7px 0px;
+  height: 120px;
+  width: 100px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #046e8f, #0189be);
+  border: 2px solid #014d6a;
+  color: white;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.tempBtn:hover,
+.postBtn:hover,
+.btnTemplate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.tempBtn:active,
+.postBtn:active,
+.btnTemplate:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background: #014d6a;
+  border-color: #016686;
+}
+.postBtns {
+  display: flex;
+  flex-direction: column;
+  height: 192px;
+  align-items: start;
+  justify-content: flex-start;
+  justify-items: center;
+  width: 170px;
+  margin-left: 10px;
+}
+.postBtn {
+  height: 50px;
+  width: 100px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(180deg, #1f3eca, #0172be);
+  border: 2px solid #014d6a;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.tempBtns {
+  display: flex;
+  height: 77px;
+  width: 1011px;
+  align-items: center;
+}
+
+.btnTemplate {
+  width: 200px;
+  margin: 0px 70px;
+  height: 80%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #0087b1, #05b0f323);
+  border: 1px solid rgba(0, 0, 0, 0.733);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+.inputsDiv {
+  display:flex;
+    width: 60%;
+    min-height: 60px;
+    margin: 4px 0px 4px 0px;
+    height: auto;
+    border: 1px solid white;
+}
+.inputsDiv h4 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px 10px;
+  font-size: 15px;
+}
+.inputsDiv select {
+  margin: 14px 10px;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+}
+
+
+</style>
+
+
+js
+
+
+<script>
+function atmPost() {
+  var number = document.getElementById("atmNum").value;
+  var time = document.getElementById("atmTime").value;
+
+  var post =
+    "Reason: PNC" +
+    "\nNew phone number: " +
+    number +
+    "\nTime chat ended : " +
+    time +
+    "\nDate : " +
+    getDate();
+
+  alert(post);
+}
+function atmCasePost() {
+  var number = document.getElementById("atmNum").value;
+  var time = document.getElementById("atmTime").value;
+
+  var post =
+    "EN" +
+    "\nReason: PNC / Visitor" +
+    "\nAction: ATM process successfully initiated / cst informed about the process /Post on profile " +
+    "\nOutcome: Waiting for cst to return within 24 hours";
+
+  alert(post);
+}
+function getDate() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const todayDate = `${day}/${month}/${year}`;
+  return todayDate;
+}
+function displayTemplate(x) {
+  const phone = document.getElementById("rePn");
+  const email = document.getElementById("reEm");
+  const pair = document.getElementById("rePa");
+
+
+  phone.style.display = "none";
+  email.style.display = "none";
+  pair.style.display = "none";
+
+
+  if (x == 1) {
+    phone.style.display = "flex";
+  } else if (x == 2) {
+    email.style.display = "flex";
+  } else if (x == 3) {
+    pair.style.display = "flex";
+  }
+}
+function rePn(x) {
+  const sameDoc = document.getElementById("sameDocSel").value;
+  const docCond = document.getElementById("docCondSel").value;
+  const nat = document.getElementById("natSel").value;
+  const pin = document.getElementById("pinSel").value;
+  var request="";
+  var data="";
+  var value="";
+ 
+
+    if (x == 1) 
+    {
+       
+    value = document.getElementById("reNum").value;
+    request="a phone number change";
+    data="New phone number: ";
+    }
+    else if (x == 2) 
+    {
+       
+    value = document.getElementById("reNum").value;
+    request="an email change";
+    data="New email: ";
+    }
+    else if (x == 3) 
+    {
+       
+    var phone = document.getElementById("reNum").value;
+    request="repairing"
+    }
+
+    const req = "Hello."+request+
+    "\n"+data +value+
+    "\nSame document: "+sameDoc+"\nDocument in good condition: "+docCond+
+    "\nNationality changed: "+nat+
+    "\nForgot Confirmation PIN: "+pin+
+    "\nThanks a lot";
+
+    alert(req);
+
+}
+function rePnPost(){
+
+}
+</script>
+
+
+
+main 
+
+
+    $(document).on("click", ".sideBtn", function () {
+    $(".Main > div").hide();
+
+    const sideBtnText = $(this).text().trim();
+    if (sideBtnText) {
+      $("#" + sideBtnText).show();
+    }
+  });
+
