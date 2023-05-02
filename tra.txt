@@ -1,0 +1,477 @@
+C_transactions
+
+<div class="pageContent pageContent-tra">
+  <div class="left left-cdc">
+    <div class="sidenav sidenav-vis" style="margin-top: -90px">
+      <button class="sideBtn">AA</button>
+      <button class="sideBtn">CT</button>
+      <button class="sideBtn">DT</button>
+      <button class="sideBtn">DD</button>
+      <button class="sideBtn">Card_payments</button>
+      <button class="sideBtn">Foreign</button>
+    </div>
+  </div>
+  <div class="mainTransactions">
+    <div id="AA" style="display:none">
+      <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+    </div>
+    <div id="CT" style="display:none">
+        <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">CT 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+
+
+    </div>
+    <div id="DT" style="display:none">
+       
+ <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">Failed SEPA reasons</label>
+           <button class="copyBtn">
+A SEPA transfer might fail if:
+There are mistakes or differences in the information provided, such as the recipient's name, account type, or IBAN. 
+It can also fail if you don't get the notification to confirm the transfer 
+Or if the bank finds something wrong during their routine checks. N26 is responsible for verifying the origin or source of transactions, and any issues found may lead to delays or failure of the transfer 
+To prevent issues, double-check all details before sending a transfer.
+           </button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">How long</label>
+           <button class="copyBtn">
+1. Instant: SEPA instant transfers are usually instant.
+2. Normal: Regular SEPA transfers take up to 2 working days.
+3. Swift: SWIFT transfers require up to 4 working days.
+
+Kindly note that onne banking day is equivalent to two working days due to bank opening hours, with weekdays that aren't holidays being considered working days.
+           </button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+
+
+    </div>
+    <div id="DD" style="display:none">
+        <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">DD 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+     
+
+    </div>
+    <div id="Card_payments" style="display:none">
+       
+       <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">Card_payments 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+
+ 
+    </div>
+    <div id="Foreign" style="display:none">
+       
+     <div class="divLeft">
+         <div class="pair">
+           <label class="btnLabel">Foreign 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+      <div class="divCenter">
+          <h3>Still AA</h3>
+          <button class="copyBtn">From what I can see this payment is still in Authorization status</button>
+          
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+            
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+
+          <h3>Still AA</h3>
+          <button class="copyBtn"></button>
+      </div>
+      <div class="divRight">
+
+         <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+           <div class="pair">
+           <label class="btnLabel">question 1</label>
+           <button class="copyBtn">Kindly note that this and that and those which do this and that</button>
+         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+css_transactions
+
+<style>
+.pageContent-tra{
+  display:flex;
+  justify-content: flex-start;
+}
+
+
+pageContent-tra .Main{
+  width:90%;
+}
+.mainTransactions{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-family: sans-serif;
+  width:100%;
+      text-align: center;
+}
+.divCenter button{
+  width:100%;
+  height: auto;
+}
+.mainTransactions h3{
+  width: 22.5%;
+  height: auto;
+  border-bottom:2px solid silver;
+  color:white;
+  margin: 10px 0px;
+  
+}
+.mainTransactions div{
+ display: flex;
+  flex-direction: column;
+
+}
+
+#AA,#CT,#DT,#DD,#Card_payments,#Foreign{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 100%;
+}
+
+.divLeft , .divRight{
+  width:22%;
+  flex-direction:column;
+  align-items:center;
+  font-family: sans-serif;
+  text-align: center;
+  height:100%
+}
+.divCenter{
+  width: 56%;
+  display:flex;
+  flex-direction:column;
+   align-items:center;
+  font-family: sans-serif;
+   text-align: center;
+   height:100%
+
+}
+
+
+.divLeft button,
+.divRight button {
+  width: 90%;
+  margin: 5px 0px 20px 0px;
+}
+
+.divLeft label,
+.divRight label {
+  width: 50%;
+
+}
+
+
+
+</style>
+
+
+
+main.js
+
+     $(document).on("click", ".sideBtn", function () {
+    $(".mainTransactions > div").hide();
+
+    const sideBtnText = $(this).text().trim();
+    if (sideBtnText) {
+      $("#" + sideBtnText).show();
+    }
+  });
+
